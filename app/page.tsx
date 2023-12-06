@@ -30,7 +30,7 @@ export default function Home() {
       <div>
       <form onSubmit={adicionarBook} className='w-full flex flex-col space-y-4 my-10'>
       <input type="text" title="title" placeholder='Nome do Livro'/> 
-          <input type="text" name="page" placeholder='Quantidade de Paginas'/> 
+          <input type="text" name="page" placeholder='Quanti. de Paginas'/> 
           <button type="submit" className='border-2 rounded-lg border-green-300 bg-green-200'>Adicionar</button>
       </form>
       </div>

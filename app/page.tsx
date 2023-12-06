@@ -1,8 +1,8 @@
-import books from '../components/books'
+import Books from '../components/Books'
 import { useState } from 'react'
 
 export default function Home() {
-  const [books, atualizarBook] = useState<any[]>([])
+  const [Books, atualizarBook] = useState<any[]>([])
 
   function adicionarBook(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -17,10 +17,10 @@ export default function Home() {
       title: title,
       page: page,
     } 
-    atualizarBook([...books, novo_book])
+    atualizarBook([...Books, novo_book])
   }
   function removerBook(title: string) {
-    let novos_books = books.filter(books => books.title != title) 
+    let novos_books = Books.filter(Books => Books.title != title) 
 
     atualizarBook(novos_books)
   }
@@ -35,7 +35,7 @@ export default function Home() {
       </form>
       </div>
       <div id="lista" className='space-y-5 w-full max-w-2xl'>
-        {books.map(Book01 => <books
+        {Books.map(Book01 => <Books
           key={Book01.title}
           nome={Book01.page} 
           removerBook={removerBook} 

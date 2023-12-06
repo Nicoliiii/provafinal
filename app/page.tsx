@@ -35,7 +35,7 @@ export default function Home() {
       </form>
       </div>
       <div id="lista" className='space-y-5 w-full max-w-2xl'>
-        {Books.map(Book01 => <Books
+        {Books.map(Book01 => < Books
           key={Book01.title}
           nome={Book01.page} 
           removerBook={removerBook} 
